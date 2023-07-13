@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#container {
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+input,
+select,
+datalist {
+  margin-top: 0.8rem;
+  margin-bottom: 0.8rem;
+}
+
+.form input,
+.form datalist {
+  width: 98%;
+  padding: 0.4rem 0 0.4rem 0.4rem;
+}
+
+.form select {
+  padding: 0.5rem;
+}
+
+#select {
+  display: flex;
+}
+
+#code {
+  margin-right: 0.2rem;
+}
+
+#pnumber {
+  padding-left: 0.5rem;
+}
+
+.SS {
+  width: 100%;
+}
+
+#fueltype {
+  width: 20px;
+}
+
+h1 {
+  text-align: center;
+  padding: 2rem;
+  font-size: 2.3rem;
+  text-decoration: underline #015454;
+}
+
+#text {
+  margin-top: 1rem;
+  padding: 0.5rem 0;
+  width: 100%;
+}
+
+span {
+  color: #ff4500;
+}
+
+.btn {
+  margin-top: 1rem;
+  margin-bottom: 4rem;
+  padding: 0.5rem 2rem;
+  background-color: #015454;
+  border: none;
+  color: #fff;
+  font-weight: bolder;
+}
+
+@media screen and (max-width: 576px) {
+  #container {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  h1 {
+    font-size: 1.3rem;
+    padding: 1.5rem;
+  }
+  h3 {
+    font-size: 1rem;
+  }
+  form input,
+  form datalist {
+    padding: 0;
+  }
+
+  .SS option {
+    font-size: 0.8rem;
+  }
+
+  #fueltype {
+    font-size: 0.3rem;
+  }
+
+  label {
+    font-size: 0.8rem;
+  }
+  input,
+  select,
+  datalist {
+    font-size: 0.7rem;
+  }
+  select {
+    margin: 0.6rem 0 0.6rem 0;
+  }
+  datalist {
+    margin: 1.1rem 0 1.1rem 0;
+  }
+  #code {
+    margin: 0.8rem 0.2rem 0.8rem 0;
+  }
+  #text {
+    height: 5rem;
+  }
+  #appointmentDate {
+    margin-top: 0.85rem;
+  }
+}
+
+@media screen and (max-width: 958px) {
+  #container {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

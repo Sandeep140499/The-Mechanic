@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/CSS/reports.css" />
+    <link rel="stylesheet" href="/CSS/common.css" />
+    <script src="./Script/NavbarFunc.js"></script>
+    <title>Login|AutoMob-Mechanic</title>
+  </head>
+  <body>
+    <header>
+      <nav id="navbar">
+        <div class="title">
+          <a href="#"><i class="fa-solid fa-car"></i>AutoMob-Mechanic</a>
+        </div>
+        <div class="nav-links">
+          <input type="checkbox" id="check" />
+          <label for="check" class="checkbtn"
+            ><i class="fa-solid fa-bars"></i
+          ></label>
+          <ul id="navbarul">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/login.html">Login</a></li>
+            <li>
+              <a href="https://mail.google.com/"
+                >contact@automob.co.in <i class="fa-solid fa-envelope"></i
+              ></a>
+            </li>
+            <li>9999-999-999 <i class="fa-solid fa-phone"></i></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <div>
+      <table class="center">
+        <thead class="hdark">
+          <tr>
+            <th scope="col">C.Id</th>
+            <th scope="col">Customer Name</th>
+            <th scope="col">Service Name</th>
+            <th scope="col">Service Date</th>
+            <th scope="col">Cost</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>C1001</td>
+            <td>Maria Anders</td>
+            <td>Car Care Service</td>
+            <td>22-Jan-2020</td>
+            <td>4500</td>
+          </tr>
+          <tr class="dark">
+            <td>C1002</td>
+            <td>Christina Berglund</td>
+            <td>Car Care Service</td>
+            <td>23-Jan-2020</td>
+            <td>4500</td>
+          </tr>
+          <tr>
+            <td>C1003</td>
+            <td>Albert Harry</td>
+            <td>Preventive Maintenance service</td>
+            <td>23-Jan-2020</td>
+            <td>5000</td>
+          </tr>
+          <tr class="dark">
+            <td>C1004</td>
+            <td>David James</td>
+            <td>Preventive Maintenance service</td>
+            <td>23-Jan-2020</td>
+            <td>5000</td>
+          </tr>
+          <tr>
+            <td>C1005</td>
+            <td>Cathy Davis</td>
+            <td>Body Repair Service</td>
+            <td>24-Jan-2020</td>
+            <td>7000</td>
+          </tr>
+          <tr class="dark">
+            <td>C1006</td>
+            <td>John David</td>
+            <td>Preventive Maintenance service</td>
+            <td>24-Jan-2020</td>
+            <td>5000</td>
+          </tr>
+          <tr>
+            <td>C1007</td>
+            <td>Melvin Jacob</td>
+            <td>Body Repair Service</td>
+            <td>25-Jan-2020</td>
+            <td>7000</td>
+          </tr>
+          <tr class="dark">
+            <td>C1008</td>
+            <td>Clark Stalin</td>
+            <td>Preventive Maintenance service</td>
+            <td>25-Jan-2020</td>
+            <td>5000</td>
+          </tr>
+          <tr>
+            <td>C1009</td>
+            <td>Arav Satya</td>
+            <td>Car Care Service</td>
+            <td>25-Jan-2020</td>
+            <td>4500</td>
+          </tr>
+          <tr class="dark">
+            <td>C1010</td>
+            <td>Mark John</td>
+            <td>Preventive Maintenance service</td>
+            <td>26-Jan-2020</td>
+            <td>5000</td>
+          </tr>
+          <tr>
+            <td>C1011</td>
+            <td>James Jacob</td>
+            <td>Car Care Service</td>
+            <td>26-Jan-2020</td>
+            <td>4500</td>
+          </tr>
+          <tr class="dark">
+            <td>C10012</td>
+            <td>Samuel Thomas</td>
+            <td>Body Repair Service</td>
+            <td>26-Jan-2020</td>
+            <td>7000</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <footer id="footer">
+      <p>Copyright &copy 2023 AutoMob-Mechanic.All Rights Reserved.</p>
+    </footer>
+  </body>
+  <script>
+    var url = window.location.href;
+
+    var menuItems = document.querySelectorAll("nav a");
+
+    menuItems.forEach(function (item) {
+      if (item.href == url) {
+        item.classList.add("current");
+      }
+    });
+  </script>
+</html>

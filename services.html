@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/CSS/common.css" />
+    <link rel="stylesheet" href="/CSS/services.css" />
+    <script src="./Script/NavbarFunc.js"></script>
+    <title>Services|AutoMob-Mechanic</title>
+  </head>
+  <body>
+    <header>
+      <nav id="navbar">
+        <div class="title">
+          <a href="#"><i class="fa-solid fa-car"></i>AutoMob-Mechanic</a>
+        </div>
+        <div class="nav-links">
+          <input type="checkbox" id="check" />
+          <label for="check" class="checkbtn"
+            ><i class="fa-solid fa-bars"></i
+          ></label>
+          <ul id="navbarul">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/login.html">Login</a></li>
+            <li>
+              <a href="https://mail.google.com/"
+                >contact@automob.co.in <i class="fa-solid fa-envelope"></i
+              ></a>
+            </li>
+            <li>9999-999-999 <i class="fa-solid fa-phone"></i></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <section>
+      <div class="content">
+        <h1>Car Repair and Service</h1>
+        <p>
+          Our representative are professionaly trained and skilled with latest
+          and futursitic techniques to provide a best quality services.
+        </p>
+        <p>
+          At AutoMob-Mechanic,we provide a hight class services to the customer
+          for their happy and memorable driving experience.
+        </p>
+      </div>
+      <div id="container">
+        <div class="box">
+          <h3>Preventive Maintenance</h3>
+          <div><img src="/assets/preventive-card.jpg" /></div>
+          <div>
+            <p>Periodically check and keep your car running.</p>
+            <p><i>Offer:20%</i></p>
+            <button
+              class="btn"
+              onclick="location.href='preventive-maintenance-service.html';"
+            >
+              More Details
+            </button>
+          </div>
+        </div>
+        <div class="box">
+          <h3>Body Repair</h3>
+          <div><img src="/assets/body-repair-card.jpg" /></div>
+          <div>
+            <p>Full chasis body repair provided by the experts.</p>
+            <p><i>Offer:10%</i></p>
+            <button
+              class="btn"
+              onclick="location.href='body-repair-service.html';"
+            >
+              More Details
+            </button>
+          </div>
+        </div>
+        <div class="box">
+          <h3>Car Care</h3>
+          <div><img src="/assets/car-care-card.jpg" /></div>
+          <div>
+            <p>Periodically check and keep your car running.</p>
+            <p><i>Offer:15%</i></p>
+            <button
+              class="btn"
+              onclick="location.href='car-care-service.html';"
+            >
+              More Details
+            </button>
+          </div>
+        </div>
+      </div>
+      <div id="timer"></div>
+    </section>
+
+    <footer id="footer">
+      <p>Copyright &copy 2020 AutoMob-Mechanic.All Rights Reserved.</p>
+    </footer>
+  </body>
+
+  <script>
+    const offerDuration = 10 * 60 * 1000;
+
+    const targetTime = new Date().getTime() + offerDuration;
+
+    const timerInterval = setInterval(updateTimer, 1000);
+
+    function updateTimer() {
+      const now = new Date().getTime();
+
+      const remainingTime = targetTime - now;
+
+      if (remainingTime < 0) {
+        clearInterval(timerInterval);
+        document.getElementById("timer").innerHTML = "Offer expired";
+        return;
+      }
+
+      const minutes = Math.floor(
+        (remainingTime % (1000 * 60 * 60)) / (1000 * 60)
+      );
+      const seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
+
+      const timerElement = document.getElementById("timer");
+      timerElement.innerHTML = `**Offer ends in ${minutes}m ${seconds}s`;
+    }
+  </script>
+</html>

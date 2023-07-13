@@ -1,0 +1,39 @@
+table,
+th,
+td {
+  text-align: left;
+  border: 1px solid #d3d3d3;
+  border-collapse: collapse;
+  padding: 10px;
+  margin-top: 2rem;
+}
+
+.center {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hdark {
+  background-color: #015454;
+  color: white;
+}
+
+.dark {
+  background-color: rgb(148, 215, 212);
+}
+@media screen and (max-width: 768px) {
+  th,
+  td {
+    font-size: 12px;
+  }
+  .center {
+    margin-bottom: 70px;
+  }
+}
+@media screen and (min-width: 416px) and (max-width: 768px) {
+  th,
+  td {
+    font-size: 16px;
+  }
+}

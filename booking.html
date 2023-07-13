@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/CSS/common.css" />
+    <link rel="stylesheet" href="/CSS/booking.css" />
+    <script src="./Script/Booking.js"></script>
+    <script src="./Script/NavbarFunc.js"></script>
+    <title>Booking|AutoMob-Mechanic</title>
+  </head>
+  <body>
+    <header>
+      <nav id="navbar">
+        <div class="title">
+          <a href="#"><i class="fa-solid fa-car"></i>AutoMob-Mechanic</a>
+        </div>
+        <div class="nav-links">
+          <input type="checkbox" id="check" />
+          <label for="check" class="checkbtn"
+            ><i class="fa-solid fa-bars"></i
+          ></label>
+          <ul id="navbarul">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/login.html">Login</a></li>
+            <li>
+              <a href="https://mail.google.com/"
+                >contact@automob.co.in <i class="fa-solid fa-envelope"></i
+              ></a>
+            </li>
+            <li>9999-999-999 <i class="fa-solid fa-phone"></i></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <section>
+      <h1>Book <span>Your</span> Service</h1>
+      <div id="container">
+        <form action="/HTML/booking-success.html" class="form">
+          <div>
+            <h3>Name:</h3>
+            <input
+              type="text"
+              name="Name"
+              required
+              placeholder="Enter Your Name"
+            />
+          </div>
+
+          <div>
+            <h3>Email Id:</h3>
+            <input
+              type="email"
+              name="Email"
+              required
+              placeholder="Enter your email id"
+            />
+          </div>
+
+          <div>
+            <h3>Phone Number:</h3>
+            <div id="select">
+              <select name="pnumber" class="number" id="code">
+                <option class="code" value="code">code</option>
+                <option value="+213">+213</option>
+                <option value="+91">+91</option>
+                <option value="+244">+244</option>
+                <option value="+61">+61</option>
+              </select>
+              <input
+                type="tel"
+                class="number"
+                name="pnumber"
+                id="pnumber"
+                required
+                pattern="[0-9]{10}"
+                placeholder="9823322332"
+              />
+            </div>
+          </div>
+
+          <div>
+            <h3>Select Service:</h3>
+            <select name="SS" class="SS" required>
+              <option value="-select-">-select-</option>
+              <option value="Preventive Maintenance Service">
+                Preventive Maintenance Service
+              </option>
+              <option value="Body Repair Service">Body Repair Service</option>
+              <option value="Car Care Service">Car Care Service</option>
+            </select>
+          </div>
+
+          <div>
+            <h3>Car Make:</h3>
+            <input
+              list="browser"
+              name="carmake"
+              required
+              class="carmake"
+              placeholder="Suzuki,Toyota..."
+            />
+            <datalist id="browser">
+              <option value="Mahindra"></option>
+              <option value="Honda"></option>
+              <option value="Hyundai"></option>
+              <option value="Ford"></option>
+              <option value="Toyota"></option>
+              <option value="Nissan"></option>
+            </datalist>
+          </div>
+
+          <div>
+            <h3>Car Model:</h3>
+            <input
+              type="text"
+              name="carmodel"
+              required
+              placeholder="Alto,Innova.."
+            />
+          </div>
+          <div>
+            <h3>Fuel Type:</h3>
+            <input type="radio" id="fueltype" name="fueltype" value="Petrol" />
+            <label for="fueltype">Petrol</label>
+            <input type="radio" id="fueltype" name="fueltype" value="Diesel" />
+            <label for="fueltype">Diesel</label>
+            <input type="radio" id="fueltype" name="fueltype" value="LPG" />
+            <label for="fueltype">LPG</label>
+            <input type="radio" id="fueltype" name="fueltype" value="Others" />
+            <label for="fueltype">Others</label>
+          </div>
+
+          <div>
+            <h3>Appointment Date:</h3>
+            <input
+              type="date"
+              name="appoin-date"
+              id="appointmentDate"
+              oninput="validateAppointmentDate()"
+              required
+            />
+            <span id="dateErrorMessage" style="font-weight: bold"></span>
+          </div>
+
+          <div>
+            <h3>Address:</h3>
+            <textarea name="Address" id="text" cols="48" rows="5"></textarea>
+          </div>
+          <button class="btn" type="submit" id="submit">Submit</button>
+        </form>
+      </div>
+    </section>
+
+    <footer id="footer">
+      <p>Copyright &copy 2020 AutoMob-Mechanic.All Rights Reserved.</p>
+    </footer>
+  </body>
+</html>

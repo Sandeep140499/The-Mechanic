@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/CSS/common.css" />
+    <link rel="stylesheet" href="/CSS/maintenanceservice.css" />
+    <link rel="stylesheet" href="/CSS/booking_success.css" />
+    <script src="./Script/NavbarFunc.js"></script>
+    <title>Booking Successful|AutoMob-Mechanic</title>
+  </head>
+  <body>
+    <header>
+      <nav id="navbar">
+        <div class="title">
+          <a href="#"><i class="fa-solid fa-car"></i>AutoMob-Mechanic</a>
+        </div>
+        <div class="nav-links">
+          <input type="checkbox" id="check" />
+          <label for="check" class="checkbtn"
+            ><i class="fa-solid fa-bars"></i
+          ></label>
+          <ul id="navbarul">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/login.html">Login</a></li>
+            <li>
+              <a href="https://mail.google.com/"
+                >contact@automob.co.in <i class="fa-solid fa-envelope"></i
+              ></a>
+            </li>
+            <li>9999-999-999 <i class="fa-solid fa-phone"></i></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <section id="container">
+      <div>
+        <img src="/assets/thankyou.jpg" />
+        <h2>Thanks for booking our service</h2>
+        <p>We will get back to you soon with the details via email/phone.</p>
+      </div>
+    </section>
+
+    <footer id="footer">
+      <p>Copyright &copy 2020 AutoMob-Mechanic.All Rights Reserved.</p>
+    </footer>
+
+    <script>
+      setTimeout(() => {
+        const userinput = prompt(
+          "On a scale of 1-10,how likely are you to recommend our website to your friends or family"
+        );
+        if (userinput === null) {
+          console.log("User cancelled the prompt.");
+        } else {
+          alert("Thank you for your feedback");
+          console.log("User entered:", userinput);
+          window.location.href = "../Html/home.html";
+        }
+      }, 5000);
+    </script>
+  </body>
+</html>
